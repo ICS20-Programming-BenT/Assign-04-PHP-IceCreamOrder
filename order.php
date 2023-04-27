@@ -35,27 +35,27 @@ if (($coneType == "sugar") && ($coneSize == "small")) {
 }
 
 // If the cone type is waffle and the size is small
-else if (($coneType == "waffle") && ($coneSize == "small")) {
+elseif (($coneType == "waffle") && ($coneSize == "small")) {
     $baseCost = 4.25;
 }
 
 // If the cone type is sugar and the size is medium
-else if (($coneType == "sugar") && ($coneSize == "medium")) {
+elseif (($coneType == "sugar") && ($coneSize == "medium")) {
     $baseCost = 5.00;
 }
   
 // If the cone type is waffle and the size is medium
-else if (($coneType == "waffle") && ($coneSize == "medium")) {
+elseif (($coneType == "waffle") && ($coneSize == "medium")) {
     $baseCost = 5.25;
 }
 
 // If the cone type is sugar and the size is large
-else if (($coneType == "sugar") && ($coneSize == "large")) {
+elseif (($coneType == "sugar") && ($coneSize == "large")) {
     $baseCost = 6.00;
 }
 
 // If the cone type is waffle and the size is large
-else if (($coneType == "waffle") && ($coneSize == "large")) {
+elseif (($coneType == "waffle") && ($coneSize == "large")) {
     $baseCost = 6.25;
 }
 
