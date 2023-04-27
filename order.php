@@ -17,50 +17,50 @@ $numCoffees = intval($_POST["amount-coffees"]);
 
 // Determining the number of toppings selected based on number of checkboxes checked and using determined value to declare variable for number of toppings chosen
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $numToppings = $_POST['checkboxes'];
+    $numToppings = $_POST['checkboxes'];
 }
 
 // Determining the cost of the toppings using number of toppings variable and cost of toppings constant
 $costToppings = $numToppings * PRICE_TOPPINGS;
 
 if ($coneType == "0") {
-  $numToppings = 0;
-  $costToppings = 0;
+    $numToppings = 0;
+    $costToppings = 0;
 }
 
 // Determining the cost of the base ice cream cone using compound if statements
 // If the cone type is sugar and the size is small
 if (($coneType == "sugar") && ($coneSize == "small")) {
-  $baseCost = 4.00;
+    $baseCost = 4.00;
 }
-  
+
 // If the cone type is waffle and the size is small
 else if (($coneType == "waffle") && ($coneSize == "small")) {
-  $baseCost = 4.25;
+    $baseCost = 4.25;
 }
-  
+
 // If the cone type is sugar and the size is medium
 else if (($coneType == "sugar") && ($coneSize == "medium")) {
-  $baseCost = 5.00;
+    $baseCost = 5.00;
 }
   
 // If the cone type is waffle and the size is medium
 else if (($coneType == "waffle") && ($coneSize == "medium")) {
-  $baseCost = 5.25;
+    $baseCost = 5.25;
 }
-  
+
 // If the cone type is sugar and the size is large
 else if (($coneType == "sugar") && ($coneSize == "large")) {
-  $baseCost = 6.00;
+    $baseCost = 6.00;
 }
-  
+
 // If the cone type is waffle and the size is large
 else if (($coneType == "waffle") && ($coneSize == "large")) {
-  $baseCost = 6.25;
+    $baseCost = 6.25;
 }
 
 else {
-  $baseCost = 0.00;
+    $baseCost = 0.00;
 }
 
 // Determining the cost of the sides using number of sides variables and prices of sides constants
