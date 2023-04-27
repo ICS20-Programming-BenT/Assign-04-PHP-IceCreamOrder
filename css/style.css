@@ -1,0 +1,46 @@
+/* Created by: Ben Thomson
+* Created on: 04/26/2023
+* This CSS file defines the style for index.php
+* ICS2O-Assign-04-PHP-IceCreamOrder
+*/
+
+body {
+  background-color: rgb(247 209 205);
+  font-weight: 900;
+  color: #735d78;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: hsl(326deg 25% 76%);
+  padding: 40px;
+  text-align: center;
+}
+
+form {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  background-color: #b392ac;
+  padding: 20px;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  background-color: #b392ac;
+  padding: 20px;
+}
+
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+
+#result {
+  background-color: #00b4d8;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
