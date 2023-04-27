@@ -1,15 +1,5 @@
 <?php
 
-function toggleToppings() {
-  $coneType = $_POST["cone-type"];
-  $disabled = true;
-  $disabledAttr = $disabled ? 'disabled' : '';
-
-  if ($coneType == 0) { 
-    $disabled = false;
-  }
-}
-
 // Setting a constant for taxes, toppings price, brownie price and coffee price
 define("HST", 0.13);
 define("PRICE_TOPPINGS", 0.50);
@@ -32,6 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Determining the cost of the toppings using number of toppings variable and cost of toppings constant
 $costToppings = $numToppings * PRICE_TOPPINGS;
+
+if ($coneType == "0") {
+  $numToppings = 0;
+  $costToppings = 0;
+}
 
 // Determining the cost of the base ice cream cone using compound if statements
 // If the cone type is sugar and the size is small
