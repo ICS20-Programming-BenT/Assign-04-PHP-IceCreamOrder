@@ -43,7 +43,7 @@
       <br><br>
 
       <!-- Body text -->
-      <?php echo "<p>Welcome to Ben's Ice Cream Parlor! Please use this web page to view our menu and place your order online! You can completely customize your order with various toppings and sides, and we will even calculate tax for you! Then, review your order and total and submit.</p>" ?>
+      <?php echo "<p>Welcome to Ben's Ice Cream Parlor! Please use this web page to view our menu and place your order online! You can completely customize your order with various toppings and sides, and we will even calculate tax for you!</p>" ?>
       <br>
 
       <!-- Table with menu items and their prices -->
@@ -114,31 +114,31 @@
         <!--Second MDL checkbox for whipped cream -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Whipped cream</span>
-          <input type="checkbox" id="whipped-cream" name="checkboxes" value="2" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="whipped-cream" name="checkboxes[]" value="1" class="mdl-checkbox__input"><br><br>
         </label>
         
         <!-- Third MDL checkbox for chopped walnuts -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Chopped walnuts</span>
-          <input type="checkbox" id="chopped-walnuts" name="checkboxes" value="3" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="chopped-walnuts" name="checkboxes[]" value="1" class="mdl-checkbox__input"><br><br>
         </label>
         
         <!-- Fourth MDL checkbox for rainbow sprinkles -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Rainbow sprinkles</span>
-          <input type="checkbox" id="rainbow-sprinkles" name="checkboxes" value="4" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="rainbow-sprinkles" name="checkboxes[]" value="1" class="mdl-checkbox__input"><br><br>
         </label>
         
         <!-- Fifth MDL checkbox for Maraschino Cherries -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Maraschino Cherries</span>
-          <input type="checkbox" id="maraschino-cherries" name="checkboxes" value="5" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="maraschino-cherries" name="checkboxes[]" value="1" class="mdl-checkbox__input"><br><br>
         </label>
         
         <!-- Sixth MDL checkbox for caramel bits -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Caramel bits</span>
-          <input type="checkbox" id="caramel-bits" name="checkboxes" value="6" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="caramel-bits" name="checkboxes[]" value="1" class="mdl-checkbox__input"><br><br>
         </label>
         <br>
         <br>

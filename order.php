@@ -6,8 +6,9 @@ define("PRICE_TOPPINGS", 0.50);
 define("PRICE_BROWNIES", 3.00);
 define("PRICE_COFFEES", 2.00);
 
-// Declaring variable for base cost that will be determined later on
+// Declaring variables for base cost and number of toppingsthat will be determined later on
 $baseCost = 0;
+$numToppings = 0;
 
 // Getting user input for cone type, cone size, number of brownies and number of coffees
 $coneType = $_POST["cone-type"];
@@ -16,13 +17,14 @@ $numBrownies = intval($_POST["amount-brownies"]);
 $numCoffees = intval($_POST["amount-coffees"]);
 
 // Determining the number of toppings selected based on number of checkboxes checked and using determined value to declare variable for number of toppings chosen
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $numToppings = $_POST['checkboxes'];
-}
+if(!empty($_POST["checkboxes"])) {
+   $numToppings = count($_POST["checkboxes"]);
+ }
 
 // Determining the cost of the toppings using number of toppings variable and cost of toppings constant
 $costToppings = $numToppings * PRICE_TOPPINGS;
 
+// Setting cost of toppings and number of toppings to zero if the user does not choose an ice cream.
 if ($coneType == "0") {
     $numToppings = 0;
     $costToppings = 0;
@@ -73,6 +75,6 @@ $taxes = $subtotal * HST;
 $total = $subtotal + $taxes;
 
 // Displaying the total to the user in the "results" div
-echo "You ordered a " . $coneSize . " ice cream with a " . $coneType . " cone. You chose " . $numToppings . " toppings for your ice cream, as well as " . $numBrownies . " brownies and " . $numCoffees . " coffees. Your subtotal is $" . number_format($subtotal, 2) . ". The amount of taxes added due to HST is $" . number_format($taxes, 2) . ". Your total is $" . number_format($total, 2) . ".";
+echo "You ordered a " . $coneSize . " ice cream with a " . $coneType . " cone. You chose " . $numToppings . " topping(s) for your ice cream, as well as " . $numBrownies . " brownie(s) and " . $numCoffees . " coffee(s). Your subtotal is $" . number_format($subtotal, 2) . ". The amount of taxes added due to HST is $" . number_format($taxes, 2) . ". Your total is $" . number_format($total, 2) . ".";
 
 ?>
