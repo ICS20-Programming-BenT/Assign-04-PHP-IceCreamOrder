@@ -19,7 +19,7 @@ $numCoffees = intval($_POST["amount-coffees"]);
 // Determining the number of toppings selected based on number of checkboxes checked and using determined value to declare variable for number of toppings chosen
 if (!empty($_POST["checkboxes"])) {
     $numToppings = count($_POST["checkboxes"]);
- }
+}
 
 // Determining the cost of the toppings using number of toppings variable and cost of toppings constant
 $costToppings = $numToppings * PRICE_TOPPINGS;
@@ -45,7 +45,7 @@ elseif (($coneType == "waffle") && ($coneSize == "small")) {
 elseif (($coneType == "sugar") && ($coneSize == "medium")) {
     $baseCost = 5.00;
 }
-  
+
 // If the cone type is waffle and the size is medium
 elseif (($coneType == "waffle") && ($coneSize == "medium")) {
     $baseCost = 5.25;
