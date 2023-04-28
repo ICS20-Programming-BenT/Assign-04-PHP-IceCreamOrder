@@ -17,8 +17,8 @@ $numBrownies = intval($_POST["amount-brownies"]);
 $numCoffees = intval($_POST["amount-coffees"]);
 
 // Determining the number of toppings selected based on number of checkboxes checked and using determined value to declare variable for number of toppings chosen
-if(!empty($_POST["checkboxes"])) {
-   $numToppings = count($_POST["checkboxes"]);
+if (!empty($_POST["checkboxes"])) {
+    $numToppings = count($_POST["checkboxes"]);
  }
 
 // Determining the cost of the toppings using number of toppings variable and cost of toppings constant
