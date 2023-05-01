@@ -25,7 +25,7 @@ if (!empty($_POST["checkboxes"])) {
 $costToppings = $numToppings * PRICE_TOPPINGS;
 
 // Setting cost of toppings and number of toppings to zero if the user does not choose an ice cream.
-if ($coneType == "0") {
+if (($coneType == "0") || ($coneSize == "0")) {
     $numToppings = 0;
     $costToppings = 0;
 }
@@ -75,6 +75,13 @@ $taxes = $subtotal * HST;
 $total = $subtotal + $taxes;
 
 // Displaying the total to the user in the "results" div
-echo "You ordered a " . $coneSize . " ice cream with a " . $coneType . " cone. You chose " . $numToppings . " topping(s) for your ice cream, as well as " . $numBrownies . " brownie(s) and " . $numCoffees . " coffee(s). Your subtotal is $" . number_format($subtotal, 2) . ". The amount of taxes added due to HST is $" . number_format($taxes, 2) . ". Your total is $" . number_format($total, 2) . ".";
+
+if (($coneType == "0") || ($coneSize == "0")) {
+   echo "You did not order an ice cream or any toppings. You ordered " . $numBrownies . " brownie(s) and " . $numCoffees . " coffee(s). Your subtotal is $" . number_format($subtotal, 2) . ". The amount of taxes added due to HST is $" . number_format($taxes, 2) . ". Your total is $" . number_format($total, 2) . ".";
+  }
+
+else {
+  echo "You ordered a " . $coneSize . " ice cream with a " . $coneType . " cone. You chose " . $numToppings . " topping(s) for your ice cream, as well as " . $numBrownies . " brownie(s) and " . $numCoffees . " coffee(s). Your subtotal is $" . number_format($subtotal, 2) . ". The amount of taxes added due to HST is $" . number_format($taxes, 2) . ". Your total is $" . number_format($total, 2) . ".";
+}
 
 ?>
