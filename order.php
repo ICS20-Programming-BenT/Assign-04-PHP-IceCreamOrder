@@ -77,11 +77,11 @@ $total = $subtotal + $taxes;
 // Displaying the total to the user in the "results" div
 
 if (($coneType == "0") || ($coneSize == "0")) {
-   echo "You did not order an ice cream or any toppings. You ordered " . $numBrownies . " brownie(s) and " . $numCoffees . " coffee(s). Your subtotal is $" . number_format($subtotal, 2) . ". The amount of taxes added due to HST is $" . number_format($taxes, 2) . ". Your total is $" . number_format($total, 2) . ".";
-  }
+     echo "You did not order an ice cream or any toppings. You ordered " . $numBrownies . " brownie(s) and " . $numCoffees . " coffee(s). Your subtotal is $" . number_format($subtotal, 2) . ". The amount of taxes added due to HST is $" . number_format($taxes, 2) . ". Your total is $" . number_format($total, 2) . ".";
+}
 
 else {
-  echo "You ordered a " . $coneSize . " ice cream with a " . $coneType . " cone. You chose " . $numToppings . " topping(s) for your ice cream, as well as " . $numBrownies . " brownie(s) and " . $numCoffees . " coffee(s). Your subtotal is $" . number_format($subtotal, 2) . ". The amount of taxes added due to HST is $" . number_format($taxes, 2) . ". Your total is $" . number_format($total, 2) . ".";
+    echo "You ordered a " . $coneSize . " ice cream with a " . $coneType . " cone. You chose " . $numToppings . " topping(s) for your ice cream, as well as " . $numBrownies . " brownie(s) and " . $numCoffees . " coffee(s). Your subtotal is $" . number_format($subtotal, 2) . ". The amount of taxes added due to HST is $" . number_format($taxes, 2) . ". Your total is $" . number_format($total, 2) . ".";
 }
 
 ?>
