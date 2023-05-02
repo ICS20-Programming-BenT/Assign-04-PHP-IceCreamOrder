@@ -148,11 +148,11 @@
         
         <!-- Input for optional brownie -->
         <label for="brownies">How many brownies would you like?</label>
-        <input type="number" step="1" min="0" id="amount-brownies" name="amount-brownies" placeholder="Number of brownies..."><br><br>
+        <input type="number" step="1" min="0" id="amount-brownies" name="amount-brownies" placeholder="Number of brownies..." value="0"><br><br>
         
         <!-- Input for optional brownie -->
         <label for="coffees">How many coffees would you like?</label>
-        <input type="number" step="1" min="0" id="amount-coffees" name="amount-coffees" placeholder="Number of coffees..."><br><br>
+        <input type="number" step="1" min="0" id="amount-coffees" name="amount-coffees" placeholder="Number of coffees..." value="0"><br><br>
         
         <!-- Submit button -->
         <input type="submit" id="button" value="Submit Order!" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
